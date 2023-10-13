@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 
 const Inbox = () => {
   // const [filteredEmails, setFilteredEmails] = useState(dummyData);
-  // const filteredEmails = useSelector((state) => state.searchQuery.mailbox);
+  const filteredEmails = useSelector((state) => state.mails.mails);
   // console.log(filteredEmails);
   console.log("hereeeeeeeeeeeeeee");
-  const filteredEmails = dummyData;
+
   return (
     <div className="p-2">
       <h1 className="text-2xl font-semibold mb-2 text-center">Inbox</h1>
