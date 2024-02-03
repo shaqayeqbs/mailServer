@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useExpertStore from "../store/booked-experts";
+
 import { Calendar } from "@hassanmojab/react-modern-calendar-datepicker";
 import BackButton from "../@core/utils/back-button";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
@@ -16,7 +16,7 @@ const CalendarPage = () => {
     day: 17,
   };
 
-  const { bookedExperts } = useExpertStore();
+  // const { bookedExperts } = useExpertStore();
   const [selectedDay, setSelectedDay] = useState(defaultValue);
   const navigate = useNavigate(); // Assuming you are using React Router
 
@@ -55,10 +55,10 @@ const CalendarPage = () => {
       <h3 className="ml-4 text-right font-bold text-md">رویدادهای امروز</h3>
 
       {/* Check if there are booked experts */}
-      {bookedExperts.length > 0 ? (
+      {[].length > 0 ? (
         <div className="m-auto w-full">
           {/* Render booked experts */}
-          {bookedExperts.map((expert) => (
+          {[].map((expert) => (
             <div
               key={expert.id}
               className="m-2 p-1 flex justify-center bg-[white]"
@@ -109,7 +109,7 @@ const CalendarPage = () => {
       )}
 
       {/* Conditional message based on whether there are booked experts */}
-      {bookedExperts?.length > 0 ? (
+      {[]?.length > 0 ? (
         <div>{/* <p className="font-bold">Your booked experts:</p> */}</div>
       ) : (
         <div className="text-center">
